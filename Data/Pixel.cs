@@ -57,6 +57,12 @@ namespace MyPhotoshop
             }
         }
         
+        public static Pixel operator*(Pixel p, double c)
+        {
+            return new Pixel(Pixel.Trim(p.R * c),
+                            Pixel.Trim(p.G * c),
+                            Pixel.Trim(p.B * c));
+        }
        
     }
 }
